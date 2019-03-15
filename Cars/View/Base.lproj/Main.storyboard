@@ -68,6 +68,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cars" id="Cab-Fw-4u4"/>
+                    <connections>
+                        <outlet property="carsTable" destination="nxS-YG-dxy" id="ZIG-x6-vls"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vON-SM-odS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

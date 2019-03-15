@@ -11,6 +11,8 @@ import Alamofire
 
 class CarsTableViewController: UITableViewController {
     
+    @IBOutlet var carsTable: UITableView!
+    
     let URL = "http://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?page=1"
     
     var carsInfo : [CarsInfo] = []
@@ -27,6 +29,7 @@ class CarsTableViewController: UITableViewController {
                 let info = try JSONDecoder().decode([CarsInfo].self, from: data)
                 self.carsInfo = info
                 print(self.carsInfo)
+                self.carsTable.reloadData()
             } catch {
                 print(error)
             }
